@@ -1,0 +1,15 @@
+https://github.com/docker/for-win/issues/25 **[lucasbasquerotto](/lucasbasquerotto) ** commented [on Dec 10, 2018](#issuecomment-445783290)
+Virtualbox -> default (VM) -> Settings -> Shared Folders -> Add
+path: d:\app
+name: /app
+auto-mount
+make permanent
+restart
+	
+$ docker run -it --name container1 -v /app:/datavol busybox
+
+
+
+https://blog.shahinrostami.com/2017/11/docker-toolbox-windows-7-shared-volumes/
+http://192.168.99.100:8888/tree?
+docker run --name="scipy" --user root -v /d/app:/scipy -d -e GRANT_SUDO=yes -p 8888:8888 jupyter/scipy-notebook start-notebook.sh --NotebookApp.token=''
